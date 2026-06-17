@@ -9,13 +9,13 @@ The architecture strictly avoids excessive total variation loss optimization. Th
 The demonstration below showcases the algorithmic translation of Leonardo da Vinci's classic portrait into the post-impressionist vocabulary of Vincent van Gogh. 
 
 ### Original Content
-![Content Image](content.jpg)
+![Content Image](https://github.com/Atousa98/Neural-Style-Transfer/releases/download/v1.0.0/content.jpg)
 
 ### Style Reference
-![Style Image](style.jpg)
+![Style Image](https://github.com/Atousa98/Neural-Style-Transfer/releases/download/v2.0.0/style.jpg)
 
 ### Stylized Output
-![Final Result](Final_Result.jfif)
+![Final Result](https://github.com/Atousa98/Neural-Style-Transfer/releases/download/v3.0.0/Final_Result.jfif)
 
 ## Setup and Execution
 
