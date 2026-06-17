@@ -19,6 +19,32 @@ The demonstration below showcases the algorithmic translation of Leonardo da Vin
 
 ## Setup and Execution
 
-To run this application locally, you must have a Python environment configured with the required deep learning and image processing libraries. The core dependencies include TensorFlow for the neural network computations, NumPy for tensor manipulations, and Pillow for image encoding and decoding. Ensure these are installed via your preferred package manager.
+### Option 1: Running in Google Colab (Recommended for quick testing)
+If you are running this project inside Google Colab to leverage free GPU acceleration, you can easily handle image uploads and directly display the output inside your notebook.
 
-Once the environment is prepared, place your target images in the root directory. Rename the base image to `content.jpg` and your artistic reference to `style.jpg`. Execute the `style_transfer.py` script. The network will perform 3000 optimization steps, calculating the gradient descent to minimize both content and style loss simultaneously. The final rendered artwork will be saved automatically to the directory as `Final_Result.jfif`.
+1. **Upload your images:** Create a cell at the top of your notebook, paste the following code, and execute it to upload your target images. Make sure to rename your core image to `content.jpg` and your artistic reference to `style.jpg` (or update the file paths inside `style_transfer.py`).
+```python
+from google.colab import files
+
+uploaded = files.upload()
+```
+
+2. **Run the core script:** Execute the main `style_transfer.py` script to begin the 3000 optimization steps.
+
+3. **Display the result:** To visualize the generated artwork directly beneath your notebook cells without downloading it first, run this snippet:
+```python
+from IPython.display import Image, display
+
+display(Image('Final_Result.jfif'))
+```
+
+### Option 2: Running Locally (Desktop IDE)
+To run this application locally on your machine:
+
+1. Ensure your local environment is configured with the required dependencies: `pip install tensorflow numpy pillow`.
+2. Place your base image as `content.jpg` and your artistic style reference as `style.jpg` directly in the root directory alongside the script.
+3. Execute the python file via your terminal:
+   ```bash
+   python style_transfer.py
+   ```
+4. The network will compute the gradient descent and automatically save the high-resolution output artwork to the root directory as `Final_Result.jfif`.
